@@ -1,0 +1,26 @@
+{
+  "name": "inoreader-app",
+  "version": "1.0.0",
+  "description": "Unofficial electron app for inoreader",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "test": "eslint ./app/*.js",
+    "app": "NODE_ENV=development electron app/index.js",
+    "dist": "npm run dist:mac && npm run dist:linux && npm run dist:win",
+    "dist:mac": "electron-packager ./app Inoreader --platform=darwin --arch=x64 app-bundle-id='com.codefalling.inoreader-app' --out=./dist --overwrite --icon=build/icon",
+    "dist:win": "electron-packager ./app Inoreader --platform=win32 --arch=x64 --out=./dist --overwrite --icon=build/icon",
+    "dist:linux": "electron-packager ./app Inoreader --platform=linux --arch=x64 --out=./dist --overwrite --icon=build/icon"
+  },
+  "devDependencies": {
+    "electron": "^1.4.10",
+    "electron-devtools-installer": "^2.0.1",
+    "electron-packager": "^8.5.1",
+    "eslint": "^3.11.1",
+    "eslint-config-rem": "^2.0.2",
+    "minimist": "^1.2.0"
+  },
+  "eslintConfig": {
+    "extends": "rem/esnext"
+  }
+}

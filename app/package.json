@@ -1,0 +1,13 @@
+{
+  "name": "inoreader-app",
+  "productName": "Inoreader",
+  "version": "0.0.1",
+  "description": "Electron client for inoreader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "codefalling <code.falling@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
